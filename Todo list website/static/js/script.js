@@ -10,7 +10,9 @@ todoForm.addEventListener('submit', function(event) {
   if (todoText !== '') {
     const todoItem = createTodoItem(todoText);
     todoList.appendChild(todoItem);
-    todoInput.value = '';
+    todoForm.action = "/";
+    todoForm.submit();
+    
   }
 });
 
